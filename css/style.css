@@ -1,0 +1,11 @@
+.sinal{
+  font-size: 30px;
+  padding-left: 10%;
+}
+.solucao{
+  display: none;
+}
+
+.restrictionV{
+  padding-bottom: 10px;
+}

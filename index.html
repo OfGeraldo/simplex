@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Simplex</title>
+  <meta charset="utf-8">
+  <script src="js/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container pt-3">
+    <h2 class="header">
+      Algoritimo Simplex
+    </h2>
+    <div class="form">
+      <div class="input-group">
+        <div class="field">
+          <div class="radio checkbox">
+            <input type="radio" id="ztypeMax" name="inputZtype" value="max" checked="">
+            <label for="ztypeMax">Maximizar</label>
+          </div>
+        </div> 
+        <div class="field">
+          <div class="radio checkbox">
+            <input type="radio" id="ztypeMin" name="inputZtype" value="min">
+            <label for="ztypeMin">Minimizar</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div id="subjects">
+          <div id="restricao0">
+            <div class="restrictionV input-group">
+              <div class=""><input type="text" placeholder="F1" id="subject0" value="2;1"></div>
+              <div class="field"><label class="sinal"> ≤ </label></div>
+              <div class=""><input type="text" id="subjectTyped0" value="18"></div>
+            </div>
+          </div>
+          <div id="restricao1">
+            <div class="restrictionV input-group">
+              <div class=""><input type="text" placeholder="F2" id="subject1" value="2;3"></div>
+              <div class="field"><label class="sinal"> ≤ </label></div>
+              <div class=""><input type="text" id="subjectTyped1" value="42"></div>
+            </div>
+          </div>
+          <div id="restricao2">
+            <div class="restrictionV input-group">
+              <div class=""><input type="text" placeholder="F3" id="subject2" value="3;1"></div>
+              <div class="field"><label class="sinal"> ≤ </label></div>
+              <div class=""><input type="text" id="subjectTyped2" value="24"></div>
+            </div>
+          </div>
+        </div>
+        <button class=" btn btn-primary" onclick="simplex()">Calcular</button>
+      </div>
+    </div>
+    <div id="tables"></div>
+    <div id="post-optimization"></div>
+  </div>
+  <script src="js/simplex.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script>
+    function clear() {
+      jQuery("#tables").empty();
+    }
+  </script>
+</body>
+
+</html>
