@@ -31,38 +31,57 @@
       </div>
       <div class="col-12">
         <div id="subjects">
+          <div id="valores">
+            <div class="valoresZ input-group">
+              <div class="mr-3"><label class="input-group m-0">x1</label></div>
+              <div><input type="number" placeholder="3" class="x-value" id="x1" value="10" required></div>
+              <div class="mx-3"><label class="input-group m-0">x2</label></div>
+              <div><input type="number" placeholder="2" class="x-value" id="x2" value="6" required></div>
+              <div class="mx-3"><label class="input-group m-0">x3</label></div>
+              <div><input type="number" placeholder="2" class="x-value" id="x3" value="4" required></div>
+            </div>
+          </div>
           <div id="restricao0">
             <div class="restrictionV input-group">
-              <div class=""><input type="text" placeholder="F1" id="subject0" value="2;1"></div>
+              <div class="mr-3"><label class="input-group m-0">f1</label></div>
+              <div><input type="text" placeholder="F1" id="subject0" value="1;1;1"></div>
               <div class="field"><label class="sinal"> ≤ </label></div>
-              <div class=""><input type="text" id="subjectTyped0" value="18"></div>
+              <div><input type="number" id="subjectTyped0" value="100"></div>
             </div>
           </div>
           <div id="restricao1">
             <div class="restrictionV input-group">
-              <div class=""><input type="text" placeholder="F2" id="subject1" value="2;3"></div>
+              <div class="mr-3"><label class="input-group m-0">f2</label></div>
+              <div><input type="text" placeholder="F2" id="subject1" value="10;4;5"></div>
               <div class="field"><label class="sinal"> ≤ </label></div>
-              <div class=""><input type="text" id="subjectTyped1" value="42"></div>
+              <div><input type="number" id="subjectTyped1" value="600"></div>
             </div>
           </div>
           <div id="restricao2">
             <div class="restrictionV input-group">
-              <div class=""><input type="text" placeholder="F3" id="subject2" value="3;1"></div>
+              <div class="mr-3"><label class="input-group m-0">f3</label></div>
+              <div><input type="text" placeholder="F3" id="subject2" value="2;2;6"></div>
               <div class="field"><label class="sinal"> ≤ </label></div>
-              <div class=""><input type="text" id="subjectTyped2" value="24"></div>
+              <div><input type="number" id="subjectTyped2" value="300"></div>
             </div>
           </div>
         </div>
-        <button class=" btn btn-primary" onclick="simplex()">Calcular</button>
+        <button class="btn btn-primary" id="calcular" onclick="simplex()">Calcular</button>
       </div>
     </div>
     <div id="tables"></div>
     <div id="post-optimization"></div>
+    <div id="sensibility-analysis"></div>
+    <br>
   </div>
   <script src="js/simplex.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
   <script>
     function clear() {
+      z = [];
+      matriz = [[]];
+      FUNCAO = [];
+      loops = 0;
       jQuery("#tables").empty();
     }
   </script>

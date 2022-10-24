@@ -1,3 +1,7 @@
+body{
+  background-color: #dedede;
+}
+
 .sinal{
   font-size: 30px;
   padding-left: 10%;
@@ -6,6 +10,26 @@
   display: none;
 }
 
+.valoresZ{
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .restrictionV{
   padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.table:not([class*="table-dark"]) {
+  background-color: #efefef;
+}
+
+.inf{
+  font-size: 2rem;
+  padding-top: 0px !important;
+  padding-bottom: 6px !important;
 }
